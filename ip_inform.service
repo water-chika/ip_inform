@@ -1,0 +1,11 @@
+[Unit]
+Description=Inform the server IPv6 address
+After=network.target
+
+[Service]
+Type=simple
+PIDFile=/run/ip_inform/pid
+ExecStart=/usr/local/bin/ip_inform --host=43.136.136.91 --port=8888
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,11 @@
+[Unit]
+Description=Receive IPv6 address
+After=network.target
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+Type=simple
+PIDFile=/run/ip_informd/pid
+ExecStart=/usr/local/bin/ip_informd 8888
